@@ -176,7 +176,7 @@ public:
    */
   bool fetchServerConfiguration(String id) {
     String uri =
-        "http://hw.airgradient.com/sensors/airgradient:" + id + "/one/config";
+        "http://mqtt.iot.home.tyknet.dk/sensors/airgradient:" + id + "/one/config";
 
     /** Init http client */
     HTTPClient client;
@@ -324,7 +324,7 @@ public:
     Serial.printf("Post payload: %s\r\n", payload.c_str());
 
     String uri =
-        "http://hw.airgradient.com/sensors/airgradient:" + id + "/measures";
+        "http://mqtt.iot.home.tyknet.dk/sensors/airgradient:" + id + "/measures";
 
     WiFiClient wifiClient;
     HTTPClient client;
