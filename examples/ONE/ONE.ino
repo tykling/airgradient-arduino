@@ -75,7 +75,6 @@ JDGFoqgCWjBH4d1QB7wCCZAA62RjYJsWvIjJEubSfZGL+T0yjWW06XyxV3bqxbYo
 Ob8VZRzI9neWagqNdwvYkQsEjgfbKbYK7p2CNTUQ
 -----END CERTIFICATE-----
 )EOF";
-esp_tls_set_global_ca_store (DSTroot_CA, sizeof (DSTroot_CA));
 
 /**
  * @brief Application state machine state
@@ -586,6 +585,10 @@ public:
     esp_mqtt_client_config_t config = {
         .uri = this->uri.c_str(),
     };
+
+    /** set CA store */
+    esp_tls_set_global_ca_store (DSTroot_CA, sizeof (DSTroot_CA));
+    Serial.printf("CA store set. Error = %d %s", err, esp_err_to_name(err));
 
     /** init client */
     client = esp_mqtt_client_init(&config);
