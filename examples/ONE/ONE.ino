@@ -742,7 +742,7 @@ uint32_t factoryBtnPressTime = 0;
 String mdnsModelName = "I-9PSL";
 int getCO2FailCount = 0;
 uint32_t addToDashboardTime;
-bool isAddToDashboard = true;
+bool isAddToDashboard = false;
 AgSchedule dispLedSchedule(DISP_UPDATE_INTERVAL, displayAndLedBarUpdate);
 AgSchedule configSchedule(SERVER_CONFIG_UPDATE_INTERVAL,
                           updateServerConfiguration);
