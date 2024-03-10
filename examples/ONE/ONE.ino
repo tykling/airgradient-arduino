@@ -584,6 +584,7 @@ public:
     /** config esp_mqtt client */
     esp_mqtt_client_config_t config = {
         .uri = this->uri.c_str(),
+        .use_global_ca_store = true,
     };
 
     /** set CA store */
