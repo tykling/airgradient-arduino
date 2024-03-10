@@ -2202,7 +2202,9 @@ static void appDispHandler(void) {
   } else if (agServer.isConfigFailed()) {
     state = APP_SM_SENSOR_CONFIG_FAILED;
   } else if (agServer.isServerFailed()) {
-    state = APP_SM_SERVER_LOST;
+    if (isAddToDashboard) {
+      state = APP_SM_SERVER_LOST;
+    }
   }
   dispSmHandler(state);
 }
