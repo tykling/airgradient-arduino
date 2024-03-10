@@ -2135,7 +2135,12 @@ static void dispSmHandler(int sm) {
     break;
   }
   case APP_SM_SERVER_LOST: {
-    displayShowDashboard("Server N/A");
+      if (isAddToDashboard) {
+        displayShowDashboard("Server N/A");
+      } else {
+        displayShowDashboard(getDevId());
+      }
+      isAddToDashboard = !isAddToDashboard;
     break;
   }
   case APP_SM_SENSOR_CONFIG_FAILED: {
