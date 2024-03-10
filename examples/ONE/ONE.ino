@@ -2295,7 +2295,7 @@ static void pmUpdate(void) {
  */
 static void sendDataToServer(void) {
   String syncData = getServerSyncData(false);
-  if (agServer.postToServer(getDevId(), syncData)) {
+  if (agServer.postToServer(getDevId(), syncData) || !isAddToDashboard) {
     resetWatchdog();
   }
 
