@@ -2186,7 +2186,7 @@ static void appLedHandler(void) {
     state = APP_SM_WIFI_LOST;
   } else if (agServer.isConfigFailed()) {
     state = APP_SM_SENSOR_CONFIG_FAILED;
-  } else if (agServer.isServerFailed()) {
+  } else if (agServer.isServerFailed() && isAddToDashboard) {
     state = APP_SM_SERVER_LOST;
   }
   ledSmHandler(state);
