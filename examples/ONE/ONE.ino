@@ -12,6 +12,7 @@ Outdoor Monitor: https://www.airgradient.com/outdoor/
 Build Instructions: https://www.airgradient.com/documentation/one-v9/
 
 The codes needs the following libraries installed:
+"AirGradient Air Quality Sensor" by AirGradient version 3.0.6
 “WifiManager by tzapu, tablatronix” tested with version 2.0.16-rc.2
 "Arduino_JSON" by Arduino version 0.2.0
 "U8g2" by oliver version 2.34.22
