@@ -201,7 +201,7 @@ public:
    */
   bool fetchServerConfiguration(String id) {
     String uri =
-        "http://www.home.batmule.dk/sensors/airgradient/" + id + "/one/config";
+        "http://mqtt.home.tyknet.dk/sensors/airgradient:" + id + "/one/config";
 
     /** Init http client */
     HTTPClient client;
@@ -349,7 +349,7 @@ public:
     Serial.printf("Post payload: %s\r\n", payload.c_str());
 
     String uri =
-        "http://www.home.batmule.dk/sensors/airgradient/" + id + "/measures";
+        "http://mqtt.home.tyknet.dk/sensors/airgradient:" + id + "/measures";
 
     WiFiClient wifiClient;
     HTTPClient client;
